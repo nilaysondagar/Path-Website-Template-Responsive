@@ -1,0 +1,50 @@
+<!--***************************************************************************
+ * Author: Nilay Sondagar
+ * Filename: index.html
+ * Date: July 20, 2018
+ * Purpose: Static path. homepage (Doesn't change in conjunction with the Chrome Extension).
+ ***************************************************************************-->
+
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>path.</title>
+    <link rel="shortcut icon" type="image/png" href="icon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+  	<div id="sidebar"> <!-- This is the slideout sidebar on the left of the page -->
+  		<h2 id="sidebar-title">path.</h2><img id="hamburger" onclick="closesidebar()" src="hamburger.png">
+  		<div class="side-nav-bar"><a>Home</a></div>
+  		<div class="side-nav-bar"><a>Places</a></div>
+  		<div class="side-nav-bar"><a>Routes</a></div>
+  		<div class="side-nav-bar"><a>Flights</a></div>
+  		<div class="side-nav-bar"><a>Bookings</a></div>
+  		<div id="bottom" class="side-nav-bar"><a>Concierge</a></div>
+  	</div>
+
+  	<div id="content"> <!-- This is for the main page content (everything but the sidebar) -->
+      <form method="get"> <!-- This is for implementing the Search bar when hooked up to the backend -->
+  		  <input type="text" id="searchbar" placeholder="Search...">
+      </form>
+  		<div style="vertical-align: center;"> <!-- This is for the "Your Places" title and the little plus button after it -->
+        <h2 id="yourplaces-title">Your Places</h2><div style="display: inline-block;"><img id="plus-button" src="plus-button.png"></div>
+      </div>
+
+  		<div id="places"> <!-- This is for the horizontally scrolling div that houses the placecards -->
+          <div id="card1" onclick="window.open('locationpage.html')" class="placecard">Morocco</div>
+          <div id="card2" onclick="window.open('locationpage.html')" class="placecard">Victoria</div>
+          <div id="card3" onclick="window.open('locationpage.html')" class="placecard">Berlin</div>
+          <div id="card4" onclick="window.open('locationpage.html')" class="placecard">Venice</div>
+          <div id="card5" onclick="window.open('locationpage.html')" class="placecard">Paris</div>
+          <div id="card6" onclick="window.open('locationpage.html')" class="placecard">Auckland</div>
+          <div id="card7" onclick="window.open('locationpage.html')" class="placecard">Ottawa</div>
+          <div id="card8" onclick="window.open('locationpage.html')" class="placecard">New York</div>
+  		</div>
+  	</div>
+
+  </body>
+ </html>

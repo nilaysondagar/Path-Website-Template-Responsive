@@ -1,0 +1,103 @@
+<!--***************************************************************************
+ * Author: Nilay Sondagar
+ * Filename: locationpage.html
+ * Date: July 20, 2018
+ * Purpose: Static path. locations page (Doesn't change in conjunction with the Chrome Extension).
+ ***************************************************************************-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>path.</title>
+    <link rel="shortcut icon" type="image/png" href="icon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+  </head>
+  <body style="background-image: url('background.png');">
+
+  	<div id="sidebar"> <!-- This is the slideout sidebar on the left of the page -->
+  		<h2 id="sidebar-title">path.</h2><img id="hamburger" onclick="closesidebar()" src="hamburger.png">
+  		<div class="side-nav-bar"><a>Home</a></div>
+  		<div class="side-nav-bar"><a>Places</a></div>
+  		<div class="side-nav-bar"><a>Routes</a></div>
+  		<div class="side-nav-bar"><a>Flights</a></div>
+  		<div class="side-nav-bar"><a>Bookings</a></div>
+  		<div id="bottom" class="side-nav-bar"><a>Concierge</a></div>
+  	</div>
+
+    <div id="content"> <!-- This is for the main page content (everything but the sidebar) -->
+      <form method="get"> <!-- This is for implementing the Search bar when hooked up to the backend -->
+        <input type="text" id="searchbar" placeholder="Search...">
+
+        <div id="uploadboxmobile"> <!-- This is for the "Add Place"/ Plus button ON MOBILE ONLY! -->
+          <img src="folder.png" style="vertical-align: middle; width: 4vw; display: inline-block;">
+          <div style="color: #ff3dce; display: inline-block; margin: 0;">Upload</div>
+        </div>
+
+      </form>
+      <br><br>
+
+      <div style="text-align: center;"> <!-- This is for keeping the 3 columns on the page in center of the content div -->
+
+        <div id="column1" class="column"> <!-- This is for the first (left-most) column of cards -->
+
+          <div id="foodbox" class="content_box">
+            <h3 class="box_title">Food</h3>
+            <img style="width: 100%;" src="food.png"/>
+          </div>
+
+          <div id="shopbox" class="content_box">
+            <h3 class="box_title">Shop</h3>
+            <img style="width: 100%;" src="shops.png"/>
+          </div>
+
+          <div id="sightsbox" class="content_box">
+            <h3 class="box_title">Sights</h3>
+            <img style="width: 100%;" src="sights.png"/>
+          </div>
+
+        </div>
+
+        <div id="column2" class="column"> <!-- This is for the second (middle) column of cards -->
+
+          <div id="spacesbox" class="content_box">
+            <h3 class="box_title">Spaces</h3>
+            <img style="width: 100%;" src="spaces.png"/>
+          </div>
+
+          <div id="activitiesbox" class="content_box">
+            <h3 class="box_title">Activities</h3>
+            <img style="width: 100%;" src="activities.png"/>
+          </div>
+
+        </div>
+
+        <div id="column3" class="column"> <!-- This is for the third (right-most) column of cards -->
+
+          <div id="eventsbox" class="content_box">
+            <h3 class="box_title">Events</h3>
+            <img style="width: 100%;" src="events.png"/>
+          </div>
+
+          <div id="culturebox" class="content_box">
+            <h3 class="box_title">Culture</h3>
+            <img style="width: 100%;" src="spaces.png"/>
+            <img style="width: 100%;" src="events.png"/>
+          </div>
+
+          </div>
+
+            <div id="uploadbox" class="content_box"> <!-- This is for the "Your Places" title and the little plus button after it ON WEB VERSION ONLY -->
+              <p style="display: inline-block;">Select your own image or copy in any URL.</p>
+              <img src="folder.png" style="vertical-align: middle; width: 3vw; display: inline-block;"/>
+              <div style="color: #ff3dce; display: inline-block; margin: 0; width: 40%;">Upload</div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+ </html>

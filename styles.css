@@ -1,0 +1,467 @@
+/****************************************************************************
+ * Author: Nilay Sondagar
+ * Filename: styles.css
+ * Date: July 20, 2018
+ * Purpose: Stylesheet for path. webpages (95% of the CSS is in this file, with a little embedded in the HTML)
+ ****************************************************************************/
+
+/*********************************************************
+ *                        TAGS CSS                       *
+ *********************************************************/
+body {
+	height: 98vh;
+	width: 100vw;
+	font-family: "Montserrat";
+	color: grey;
+	overflow-x: hidden;
+	background-position: center;
+}
+
+h3 {
+	color: #ff3dce;
+	font-weight: 500;
+	margin-left: 1vw;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+	text-align: left;
+}
+
+img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+@font-face {
+    font-family: "PathCustom";
+    src: url("webfont.ttc");
+}
+
+/*********************************************************
+ *                          ID CSS                       *
+ *********************************************************/
+
+#column1 {
+	margin-left: 5vw;
+}
+
+#content {
+	display: inline-block;
+	height: 100%;
+	width: 80%;
+}
+
+#hamburger {
+	display: block;
+	width: 2vw;
+    position: absolute;
+    left: 0.7vw;
+    top: 3vh;
+}
+
+#places {
+	height: 72%;
+	width: 95%;
+	min-height: 482px;
+	margin-left: 4%;
+	padding-left: 1%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	transition: ease-out 1s;
+}
+
+#plus-button {
+	vertical-align: center;
+	display: inline-block;
+	width: 2vw;
+	vertical-align: bottom;
+	margin-left: 1vw;
+}
+
+#searchbar {
+	height: 4vh;
+	width: 20vw;
+	min-width: 315px;
+	min-height: 40px;
+	font-family: "Montserrat";
+	font-size: calc(12px + 0.5vw);
+	margin-top: 2%;
+	margin-left: 3vw; 
+	padding-left: 1vw;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px 1px rgba(199,199,199,1);
+	border: none;
+	transition: ease-out 0.5s;
+}
+
+#searchbar:hover {
+	box-shadow: 0px 0px 20px 1px rgba(199,199,199,1);
+	transition: ease-out 0.5s;
+}
+
+#searchbar:focus {
+	outline: 0;
+	box-shadow: 0px 0px 50px 1px rgba(199,199,199,1);
+	transition: ease-out 0.5s;
+}
+
+#sidebar {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	left: 0;
+	margin-top: -5px;
+	margin-left: -5px;
+	height: 99vh;
+	width: 18%;
+	background-color: white;
+	border-radius: 0px 10px 10px 0px;
+	box-shadow: 5px 0px 10px 1px rgba(199,199,199,1);
+}
+
+#sidebar-title {
+	display: inline-block;
+	font-family: "PathCustom";
+	font-size: 3vw;
+    color: #002BDB;
+    margin-top: 20%;
+    margin-bottom: 30%;
+    padding-top: 0%;
+}
+
+#yourplaces-title {
+	display: inline-block;
+	font-family: "Montserrat";
+	color: black;
+	font-weight: bold;
+	margin-left: 5%;
+	margin-top: 10%;
+}
+
+#uploadbox {
+	min-height: 150px;
+	float: left;
+	margin-left: 2vh;
+}
+
+#uploadboxmobile {
+	display: none;
+}
+
+/*********************************************************
+ *                       CLASS CSS                       *
+ *********************************************************/
+
+.column {
+	display: inline-block;
+	text-align: left;
+	padding-bottom: 2vh;
+	width: 15vw;
+	float: left;
+	margin-right: 1vw;
+}
+
+.content_box {
+	display: inline-block;
+	width: 12vw;
+	font-family: "Montserrat";
+	color: grey;
+	background-color: white;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+	padding-left: 0.5vw;
+	padding-right: 0.5vw;
+	padding-bottom: 0.5vh;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 0px rgb(152, 147, 147);
+	animation: 2s ease-out 1 slideUpImage;
+	transition: ease-out 0.5s;
+}
+
+.content_box:hover {
+	box-shadow: 1px 5px 15px 5px rgb(152, 147, 147);
+	transition: ease-out 0.5s;
+}
+
+.instaimage {
+	display: block;
+	height: 150px;
+    background-size: cover;
+    width: 150px;
+    background-position: center;
+    margin: 0 auto; 
+    vertical-align: top;
+    box-shadow: 1px 5px 15px 5px rgb(152, 147, 147);
+}
+
+.placecard {
+	font-family: "PathCustom";
+	color: white;
+	font-size: 35px;
+	display: inline-block;
+	text-align: center;
+	height: 35vh;
+	width: 12vw;
+	min-width: 220px;
+	min-height: 345px;
+	border-radius: 10px;
+	padding: 5px;
+	padding-top: 2%;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 10px;
+	vertical-align: top;
+	white-space: normal;
+	box-shadow: 0px 0px 10px 1px rgba(199,199,199,1);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: ease-out 0.5s;
+	animation: 2s ease-out 0s 1 slideInFromRight;
+}
+
+.placecard:hover {
+	box-shadow: 1px 5px 15px 5px rgb(152, 147, 147);
+	transition: ease-out 0.5s;
+}
+
+.rightsideup {
+	animation: 1s ease-out 1 rightSideLogo;
+	animation-fill-mode: forwards;
+}
+
+.side-nav-bar {
+	font-family: "Montserrat";
+	font-size: calc(18px + 0.3vw);
+	color: grey;
+	margin-top: 3vh;
+	transition: ease-out 0.5s;
+}
+
+.side-nav-bar:hover {
+	color: #002BDB;
+	transition: ease-out 0.5s;
+}
+
+.sideways {
+	animation: 1s ease-out 1 sidewaysLogo;
+	animation-fill-mode: forwards;
+}
+
+.slidein {
+	animation: 1s ease-out 1 slideNavBarIn;
+	animation-fill-mode: forwards;
+}
+
+.slidedown {
+	animation: 1s ease-out 1 slideDownImage;
+	animation-fill-mode: forwards;
+}
+
+.slideup {
+	animation: 1s ease-out 1 slideUpImage;
+	animation-fill-mode: forwards;
+}
+
+.slideout {
+	animation: 1s ease-out 1 slideNavBarOut;
+	animation-fill-mode: forwards;
+}
+
+/*********************************************************
+ *                   MEDIA SPECIFIC CSS                  *
+ *********************************************************/
+
+@media only screen and (orientation: portrait) {
+	
+	.column {
+		text-align: center;
+		width: 54vw;
+		margin-right: 0;
+	}
+
+	.content_box {
+		font-size: calc(25px + 1vw);
+		width: 90%;
+		height: 90%;
+		padding: 2vw;
+	}
+
+	.placecard {
+		font-size: calc(50px + 6vw);
+		width: 90%;
+		height: 90%;
+	}
+
+	.side-nav-bar {
+		display: inline-block;
+		font-size: calc(24px + 0.5vw);
+		margin-left: 2vh;
+	}
+
+	#column1 {
+		margin-left: 0;
+	}
+
+	#column3 {
+		margin-top: -21vw;
+	}
+
+	#content {
+		width: 110vw;
+	}
+
+	#hamburger {
+		display: none;
+	}
+
+	#places {
+		height: 90%;
+		width: 107vw !important;
+	}
+
+	#searchbar {
+		width: 70vw;
+		height: 6vh;
+		font-size: calc(24px + 0.5vw);
+		padding-left: 3vw;
+	}
+
+	#sidebar {
+		display: inline-block;
+		margin-top: 1vh;
+		margin-left: 2vw;
+		height: 10vh;
+		width: 108vw;
+		left: 0;
+		top: 0;
+		box-shadow: 1px 0px 10px 1px rgba(199,199,199,1);
+		border-radius: 10px;
+		transition: ease-out 0.5s;
+		animation-fill-mode: none;
+	}
+
+	#sidebar-title {
+		margin-top: 2vh;
+		margin-left: 0;
+		font-size: calc(50px + 0.5vw);
+	}
+
+	#uploadbox {
+		display: none;
+	}
+
+	#uploadboxmobile {
+		display: inline-block;
+		font-size: calc(22px + 1vw);
+		height: 4vh;
+		width: 20vw;
+		background: white;
+		border-radius: 10px;
+		vertical-align: top;
+		margin-left: 1vw;
+		margin-top: 2%;
+		padding: 1vh;
+		text-align: center;
+		box-shadow: 0px 0px 10px 1px rgba(199,199,199,1);
+	}
+
+	#yourplaces-title {
+		font-size: calc(25px + 4vw);
+		margin-top: 2vh;
+	}
+
+}
+
+/*********************************************************
+ *                      ANIMATIONS                       *
+ *********************************************************/
+
+ @keyframes slideInFromRight {
+    0% {
+        transform: translateX(500%);
+        box-shadow: 1px 5px 15px 5px rgb(152, 147, 147);
+    }
+    100% {
+        transform: translateX(0);
+        box-shadow: 0px 0px 10px 1px rgba(199,199,199,1);
+    }
+}
+
+@keyframes slideNavBarIn {
+	0% {
+		margin-left: -1vw;
+	}
+	100% {
+		margin-left: -15vw;
+	}
+}
+
+@keyframes slideNavBarOut {
+	0% {
+		margin-left: -15vw;
+	}
+	100% {
+		margin-left: -1vw;
+	}
+}
+
+@keyframes slideDownImage {
+	0% {
+
+	}
+	100% {
+		transform: translateY(500%);
+	}
+}
+
+@keyframes slideUpImage {
+	0% {
+		transform: translateY(500%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+/*********************************************************
+ *                      TEMP STUFF                       *
+ *********************************************************/
+
+/*These are just for the static index.html page. They can be deleted/changed whenever you no longer need the static page*/
+
+#card1 {
+	background-image: url("https://cdn.tourradar.com/s3/tour/original/2401_9c3be8.jpg");
+}
+
+#card2 {
+	background-image: url("https://lonelyplanetimages.imgix.net/a/g/hi/t/1c992b6c01bfdbdb13ad3d204a59036d-victoria.jpg?sharp=10&vib=20&w=1200");
+}
+
+#card3 {
+	background-image: url("http://www.slate.com/content/dam/slate/articles/news_and_politics/roads/2016/04/160414_RK_Berlin.jpg.CROP.promo-xlarge2.jpg");
+}
+
+#card4 {
+	background-image: url("https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5244707255001_5214913279001-vs.jpg?pubId=5104226627001&videoId=5214913279001");
+}
+
+#card5 {
+	background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/HbJ1EDbHeix950qa7/france-paris-eiffel-tower-night-2_smnp-tghl_thumbnail-full01.png");
+}
+
+#card6 {
+	background-image: url("https://redox.com/media/1302/aucklandbanner-1920.jpg");
+}
+
+#card7 {
+	background-image: url("https://www.fasken.com/-/media/29b8b6a371344d40a392350b395691d6.ashx");
+}
+
+#card8 {
+	background-image: url("https://secureservercdn.net/427.678.godaddywp.com/wp-content/uploads/statue-of-liberty-horizontal.jpeg");
+}
+
+
+
+
